@@ -1,0 +1,66 @@
+
+        <!-- The Modal -->
+        <div id="signInModal" class="signin-modal">
+
+            <!-- Modal content -->
+                <div class="signin-content">
+                    <div class="modal-header">
+                        <span class="closeSignInModal">&times;</span>
+                        <h2 style="text-align: center;">Welcome to DelayedOunce</h2>
+                    </div>
+                    <div class="signin-body">
+                        <!--Log In-->
+                        <span class="sign" style="transform: translate(-12);">Log In</span>
+                        <div class="form1">
+                            <input class="un" style="transform: translate(-5%);" type="text"placeholder="Username">
+                            <input class="pass" style="transform: translate(-5%);" type="password" placeholder="Password">
+                            <button class="signinButton">Log in</button>
+                        </div>
+                        <span class="or">Or</span>
+                        <br>
+                        <br>
+                        <br>
+                        <span class="sign" style="transform: translate(-12);">Sign Up</span>
+                        <div class="form1">
+                            <input class="signUpName" style="transform: translate(-5%);" type="text"placeholder="Name">
+                            <input class="un" style="transform: translate(-5%);" type="text"placeholder="Username">
+                            <input class="pass" style="transform: translate(-5%);" type="password" placeholder="Password">
+                            <button class="signinButton">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+                        <div id="messages"></div>
+            <div class="container">
+                <div class="post">
+                    <div class="top">
+                        <img class="profilePhoto" src="lebron.jpg">
+                        <div class="names">
+                            <h3 class="name">LeBron James</h3>
+                            <h5 class="username">@michaeldegoat</h5>
+                            <h6 class="time">9:12AM</h6>
+                        </div>
+                    </div>     
+                    <div class="postBody">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat dolor fuga libero reprehenderit aspernatur similique, nobis voluptates animi, quasi obcaecati dicta doloribus eveniet odio aliquam eum non tempora molestias provident. lore
+                        lore
+                    </div>
+                    <div class="buttonGroup">
+                    <a href="#" id="like" class="likeButton"><i class="fa fa-heart-o"></i></a>
+                        <a href="#" class="repostButton"><i class="fa fa-retweet" aria-hidden="true"></i></a>
+                        <a href="#" class="addCommentButton"><i class="fa fa-comments-o" aria-hidden="true"></i></a>
+                        <a href="#" class="shareButton"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+    

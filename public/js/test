@@ -1,0 +1,116 @@
+const socket = io()
+
+// Elements
+const $messageForm = document.querySelector('#message-form')
+const $messageFormInput = $messageForm.querySelector('input')
+const $messageFormButton = $messageForm.querySelector('button')
+const $messages = document.querySelector('#messages')
+
+// Templates
+const messageTemplate = document.querySelector('#message-template').innerHTML
+
+socket.on('message', (message) => {
+    console.log(message)
+    const html = Mustache.render(messageTemplate, {
+        message
+    })
+    $messages.insertAdjacentHTML('beforeend', html)
+})
+
+$messageForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    $messageFormButton.setAttribute('disabled', 'disabled')
+
+    const message = e.target.elements.message.value
+
+    socket.emit('sendMessage', message, (error) => {
+        $messageFormButton.removeAttribute('disabled')
+        $messageFormInput.value = ''
+        $messageFormInput.focus()
+
+        if (error) {
+            return console.log(error)
+        }
+
+        console.log('Message delivered!')
+    })
+})
+
+
+
+const socket = io()
+
+// Elements
+const $messageForm = document.querySelector('#message-form')
+const $messageFormInput = $messageForm.querySelector('input')
+const $messageFormButton = $messageForm.querySelector('button')
+const $messages = document.querySelector('#messages')
+
+// Templates
+const messageTemplate = document.querySelector('#message-template').innerHTML
+
+socket.on('message', (message) => {
+    console.log(message)
+    outputMessage(message)
+})
+
+$messageForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    $messageFormButton.setAttribute('disabled', 'disabled')
+
+    const message = e.target.elements.message.value
+
+    socket.emit('sendMessage', message, (error) => {
+        $messageFormButton.removeAttribute('disabled')
+        $messageFormInput.value = ''
+        $messageFormInput.focus()
+
+        if (error) {
+            return console.log(error)
+        }
+
+        console.log('Message delivered!')
+    })
+})
+
+function outputMessage(message){
+    const container = document.createElement('div')
+    container.classList.add('container')
+
+    const post = document.createElement('div')
+    post.classList.add('post')
+    container.appendChild('post')
+
+    const top = document.createElement('div')
+    top.classList.add('top')
+    post.appendChild('top')
+
+    const profilePhoto = document.createElement('img')
+    profilePhoto.src = 'lebron.jpg'
+    profilePhoto.classList.add('profilePhoto')
+    top.appendChild('profilePhoto')
+
+    const names = document.createElement('div')
+    names.classList.add('names')
+    top.appendChild('names')
+
+    const name = document.createElement('h3')
+    name.classList.add('name')
+    names.appendChild('name')
+
+    const username = document.createElement('h5')
+    username.classList.add('username')
+    names.appendChild('username')
+
+    const time = document.createElement('h6')
+    time.classList.add('time')
+    names.appendChild('time')
+
+    const postBody = document.createElement('postBody')
+    postBody.classList.add('postBody')
+    post.appendChild('postBody')
+    postBody.value = 'Please work'
+
+}

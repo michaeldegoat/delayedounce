@@ -1,0 +1,446 @@
+/*Button*/
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.newPost {
+    background: rgb(2,0,36);
+    background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(118,9,121,1) 0%, rgba(255,231,0,1) 90%);
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.newPost:hover {
+    background: #d35400;
+}
+
+.newPost:active {
+    background: red;
+}
+/*Modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    border-radius:10px;
+  }
+
+  .signin-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  .signin-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4ss;
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close, .closeSignInModal {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus,
+  .closeSignInModal:hover,
+  .closeSignInModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(118,9,121,1) 0%, rgba(255,231,0,1) 90%);
+    color: white;
+  }
+  
+  .modal-body {
+    padding: 2px 16px;
+    height: 400px;
+}
+
+.signin-body {
+  padding: 2px 16px;
+  height: 700px;
+}
+  
+/*Modal Content CSS*/
+.sendPostButton {
+    border: none;
+    box-shadow: none;
+    transition: 0.5s;
+    float: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(118,9,121,1) 0%, rgba(255,231,0,1) 90%);
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.sendPostButton:active {
+    background: gray;
+}
+
+.inputText {
+    height: 30px;
+    width: 500px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchBar {
+  margin-right: 20px;
+  height: 20px;
+  width: 200px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 3px;
+  text-indent: 10px;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color:  rgb(2,0,36);
+}
+
+.logo {
+  background: -webkit-linear-gradient(rgba(118,9,121,1),  rgba(255,231,0,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sendPostButton:hover {
+    background: #d35400;
+}
+
+.sendPostButton:active {
+    background: red;
+}
+
+.addImageButton {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+#video {
+  font-size: 24px;  color: #bdc3c7; transition: 0.3s;
+}
+
+#video:hover {
+  color: #95a5a6;
+}
+
+#video:active {
+  color: #7f8c8d;
+}
+#image {
+  font-size: 24px; color: #bdc3c7; transition: 0.3s;
+}
+
+#image:hover {
+  color: #95a5a6;
+}
+
+#image:active {
+  color: #7f8c8d;
+}
+
+.addVideoButton {
+  position: absolute;
+  bottom: 10px;
+  left: 44px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+#comment {
+  font-size: 24px; color: #bdc3c7; transition: 0.3s;
+}
+
+#comment:hover {
+  color: #95a5a6;
+}
+
+#comment:active {
+  color: #7f8c8d;
+}
+/*Post CSS*/
+
+.profilePhoto {
+  height: 50px;
+  width: 50px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.container {
+  text-align: center;
+}
+.post {
+  width: 800px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  padding-top: 30px;
+}  
+
+.name {
+  display: inline-block;
+}
+.names {
+  display: flex;
+  padding-left: 20px;
+  transform: translate(0%, -30%);
+}
+
+.top {
+  display: flex;
+}
+
+.username {
+  padding-left: 20px;
+}
+
+.postBody {
+  text-align: left;
+  width: 750px;
+  height: 60px;
+  transform: translate(5%, -63%);
+  resize: none;
+  border: none;
+}
+
+.time {
+  padding-left: 442px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(-9%, -225%);
+  font-size: 15px;
+}
+
+.signin-input {
+  padding-top: 10px;
+}
+
+.usernameInput {
+  display: block;
+  height: 25px;
+  width: 400px;
+  border-radius: 8px;
+  border: 1px gray solid;
+  box-shadow: none;
+}
+.passwordInput {
+  display: block;
+  height: 25px;
+  width: 400px;
+  border-radius: 8px;
+  border: 1px gray solid;
+  box-shadow: none;
+}
+
+/*Sign in Modal Style*/
+.signin-body {
+  text-align: center;
+  padding-top: 20px;
+}
+.username {
+  display: block;
+}
+
+.password {
+  display: block;
+}
+
+.sign {
+  padding-top: 40px;
+  color: #8C55AA;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+.un, .signUpDisplayName, .signUpName {
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .form1 {
+      padding-top: 40px;
+  }
+  .pass {
+    width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.signinButton {
+  width: 20%;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: #3498db;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+  transform: translate(-21%);
+  transition: 0.2s;
+}
+.signinButton:hover {
+  background-color: #2980b9;
+}
+
+
+.un:focus, .pass:focus {
+border: 2px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.or {
+  background: -webkit-linear-gradient(rgba(118,9,121,1),  rgba(255,231,0,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+}
+
+.comment {
+  transform: translate(10%, -20%);
+}
+
+.commentTop {
+  display: flex;
+}
+
+.commentProfilePhoto {
+  height: 30px;
+  width: 30px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+.commentBody {
+  font-size: 12px;
+  text-align: left;
+  width: 750px;
+  height: 60px;
+  transform: translate(2%, -70%);
+  resize: none;
+  border: none;
+}
+
